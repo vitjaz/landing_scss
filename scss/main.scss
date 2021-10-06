@@ -1,0 +1,284 @@
+@import "variables.scss";
+@import "utilities.scss";
+
+// Section Header
+header {
+  background: url(../img/main_bg.svg) center center/cover no-repeat;
+
+  .logo {
+    width: 83px;
+    height: 71px;
+  }
+
+  .text-logo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  // "Это просто" and decoration
+  .main-text-header {
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 80px;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 292px;
+      height: 2px;
+      background: $light-color;
+      margin-bottom: 30px;
+      margin-right: 10px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 292px;
+      height: 2px;
+      background: $light-color;
+      margin-bottom: 30px;
+      margin-left: 10px;
+    }
+  }
+
+  #big-text-header {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  #down-text-header {
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+// Section 1: Waiting
+#section-1 {
+  background: $bg-light-gray;
+  height: 600px;
+  .title-section-1 {
+    color: $black-color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .text-section-1 {
+    color: $dark-color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 20px;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    .item {
+      text-align: center;
+      .desc-img {
+        color: $dark-color;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 21px;
+        max-width: 342px;
+      }
+    }
+  }
+}
+
+// Section 2: What is?
+#section-2 {
+  height: 500px;
+
+  .flex {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100%;
+
+    #section-2-woman-img {
+      position: absolute;
+      top: 0;
+      left: -240px;
+      z-index: -1;
+    }
+
+    .text-container {
+      max-width: 750px;
+
+      #section-2-title {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $blue-text-color;
+      }
+
+      #section-2-text {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 27px;
+
+        strong {
+          color: $dark-color;
+        }
+      }
+    }
+  }
+}
+
+// Section 3: What u can
+#section-3 {
+  height: 450px;
+  background: url(../img/section-3/second_bg.svg) center center/cover no-repeat;
+
+  .section-3-title {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .flex-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &:hover {
+        .bg-icon {
+          transform: scale(1.2, 1.2);
+        }
+        .desc-icon {
+          color: $main-color;
+        }
+      }
+
+      .bg-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 118px;
+        width: 118px;
+        background: $bg-icons;
+        border-radius: 50%;
+        transition: 0.4s;
+      }
+    }
+
+    .desc-icon {
+      color: $bg-light-gray; //bad name, sry
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 20px;
+      text-align: center;
+      max-width: 230px;
+      transition: 0.4s;
+    }
+
+    // Width for first item desc
+    &:first-child {
+      p {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+// Section 4: Gifts
+#section-4 {
+  background: $bg-light-gray;
+  height: 630px;
+
+  &-gift-img {
+    width: 154px;
+    height: 174px;
+  }
+
+  &-text {
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 43px;
+    color: $black-color;
+  }
+}
+
+// Section 5: Date
+#section-5 {
+  height: 520px;
+  &-p-1 {
+    color: $black-color;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &-p-2 {
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 20px;
+    color: $dark-color;
+  }
+  &-title {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $blue-text-color;
+  }
+}
+
+// Footer
+footer {
+  background: $bg-footer;
+  height: 170px;
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li a {
+      color: $text-footer-color;
+      padding: 5px;
+      font-family: Roboto;
+      text-decoration: underline;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 21px;
+      &:hover {
+        color: $light-color;
+      }
+    }
+
+    #footer-link-1 {
+      &::after {
+        content: "|";
+        padding-left: 10px;
+        color: $text-footer-color;
+      }
+    }
+  }
+  p {
+    color: $text-footer-color;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
